@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web-Development-Training</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="shortcut icon" href="logo-img.png" type="image/x-icon" />
+  </head>
+  <body>
+    <main>
+      <!-- Left section containing heading -->
+      <section class="left-section">
+        <img src="logo-img.png" alt="logo" />
+        <h3>For Individuals</h3>
+        <p>
+          Start benefiting from the wellness experience. For companies looking
+          on increasing productivity, and improving organization wellness.
+        </p>
+      </section>
+
+      <!-- Main form section on the right -->
+      <form action="">
+        <div class="form-details">
+          <!-- First column for destop screen starts here -->
+
+          <div class="names">
+            <div class="input-item">
+              <label for="first-name">First Name</label>
+              <input
+                type="text"
+                name="first-name"
+                id="name"
+                placeholder="First name"
+              />
+            </div>
+            <div class="input-item">
+              <label for="last-name">Last Name</label>
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                placeholder="Last name"
+              />
+            </div>
+          </div>
+
+          <!-- First column for destop screen ends here -->
+
+          <div class="gender-birth">
+            <div class="input-item">
+              <label for="gender">Gender</label>
+              <select name="gender" id="gender">
+                <option value="select" hidden>Select here</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div class="input-item">
+              <label for="DOB">Date of Birth</label>
+              <input
+                type="date"
+                name="DOB"
+                id="DOB"
+                placeholder="Select here"
+              />
+            </div>
+          </div>
+
+          <div class="weight-height">
+            <div class="input-item">
+              <label for="weight">Weight (KG)</label>
+              <input
+                type="text"
+                name="weight"
+                id="weight"
+                placeholder="Enter Weight"
+              />
+            </div>
+            <div class="input-item">
+              <label for="height">Height (CM)</label>
+              <input
+                type="text"
+                name="height"
+                id="height"
+                placeholder="Enter height here.."
+              />
+            </div>
+          </div>
+          <div class="input-item">
+            <label for="activity-level">Activity Level</label>
+            <select name="activity-level" id="activity-level">
+              <option value="select" hidden>Select here</option>
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+            </select>
+          </div>
+          <div class="input-item">
+            <label for="password">Password</label>
+            <div class="icon-input-field">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter Password"
+              />
+            </div>
+          </div>
+          <button type="submit">Register</button>
+          <p class="agreements desktop">
+            By clicking Register, you agree to our
+            <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>
+          </p>
+        </div>
+        <p class="agreements mobile">
+          By clicking Register, you agree to our
+          <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>
+        </p>
+      </form>
+    </main>
+  </body>
+</html>

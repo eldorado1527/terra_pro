@@ -1,0 +1,287 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/*----------- Universal styling starts here--------------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(247, 253, 252, 1);
+  margin: 0;
+  padding: 0;
+}
+
+
+label {
+  margin-bottom: .5rem;
+}
+
+
+
+.input-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  >input[type="date"] {
+    width: 100%;
+  }
+
+
+  >input,
+  select {
+    border: 1px solid rgba(240, 240, 240, 1);
+    padding: 10px 7px;
+    font-size: 12px;
+    color: #a8a8a8;
+
+    &::placeholder {
+      color: #a8a8a8;
+    }
+
+    &:focus {
+      outline: 2px solid rgba(46, 196, 182, 1);
+    }
+  }
+
+  .icon-input-field {
+    position: relative;
+    margin-bottom: 1rem;
+
+
+    >input {
+      position: absolute;
+      padding: 10px 7px;
+      width: 100%;
+      border: 1px solid rgba(240, 240, 240, 1);
+
+      &::placeholder {
+        color: #a8a8a8;
+      }
+
+      &:focus {
+        outline: 2px solid rgba(46, 196, 182, 1);
+      }
+
+    }
+
+
+    >img {
+      position: absolute;
+      width: 15px;
+      right: 4px;
+      top: 12px;
+    }
+  }
+
+
+}
+
+/*----------- Universal styling ends here--------------- */
+
+
+/*----------- Main section--------------- */
+
+main {
+  .left-section {
+    padding: 1rem;
+
+    >img {
+      width: 100px;
+      margin-left: -20px;
+    }
+
+    >h3 {
+      font-size: 30px;
+      margin-top: -10px;
+    }
+
+    >p {
+      font-size: 14px;
+      font-weight: 300;
+      margin-top: -25px;
+    }
+  }
+
+  /* ----------- form right section----------- */
+
+  >form {
+    width: 100%;
+
+    .form-details {
+      margin: 1rem;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 1);
+      box-shadow: 0 0 5px 2px rgba(4, 8, 19, 0.1);
+
+      .names,
+      .gender-birth,
+      .weight-height {
+        display: flex;
+        flex-direction: column;
+
+        .input-item {
+          width: 100%;
+        }
+      }
+
+      /* Button */
+
+      >button {
+        background-color: rgba(46, 196, 182, 1);
+        border: none;
+        border: 5px;
+        color: #fff;
+        width: 100%;
+        padding: 10px 7px;
+        margin-top: 1rem;
+      }
+
+    }
+
+
+
+
+
+  }
+}
+
+/* -------Footer (privacy policy and terms) starts----------- */
+
+.agreements {
+
+  margin: 1rem auto;
+  font-size: 12px;
+  text-align: center;
+
+
+  >a {
+    color: rgba(46, 196, 182, 1);
+  }
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile {
+  width: 80%;
+}
+
+
+/* -------Footer (privacy policy and terms) ends----------- */
+
+/* Media Query for tablet */
+
+@media (min-width: 500px) and (max-width: 999px) {
+
+  .form-details {
+    margin: 1rem !important;
+
+    .names,
+    .gender-birth,
+    .weight-height {
+      display: flex;
+      flex-direction: row !important;
+
+      :first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+/*---------------------- Media Query for desktop ------------------------------------ */
+
+
+@media (min-width: 1000px) {
+  body {
+    margin: 0;
+    padding: 0;
+
+  }
+
+  .input-item {
+    flex-direction: column;
+  }
+
+
+  main {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+    .left-section {
+      padding: 1rem;
+
+      >img {
+        width: 130px;
+        margin-left: -30px;
+      }
+
+      >h3 {
+        font-size: 25px;
+      }
+
+      >p {
+        font-size: 17px;
+        width: 90%;
+        margin-top: -10px;
+      }
+
+    }
+
+    >form {
+      width: 100%;
+
+      .form-details {
+        /* margin: 1rem;
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 0 0 5px 2px rgba(4, 8, 19, 0.1); */
+
+        .names,
+        .gender-birth,
+        .weight-height {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+
+          :first-child {
+            margin-right: 1rem;
+          }
+        }
+
+
+
+      }
+    }
+
+
+
+
+    .mobile {
+      display: none;
+    }
+
+    .desktop {
+      display: block;
+      margin-bottom: 0;
+    }
+
+  }
+}
+
+
+
+/* Change the icon on the date of birth input */
+
+::-webkit-calendar-picker-indicator {
+  background-image: url(./img/calender.png);
+}
